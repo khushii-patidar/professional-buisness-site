@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: lokeshh-ai-tools
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python setup_data.py
+    startCommand: gunicorn editor_lokesh.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: .onrender.com,.render.com
+      - key: EMAIL_HOST_PASSWORD
+        sync: false

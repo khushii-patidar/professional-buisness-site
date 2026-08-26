@@ -1,0 +1,861 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Lokeshh Ai Tools | Next-Gen AI Video Creation & Graphic Design Studio{% endblock %}
+
+{% block content %}
+
+<!-- ── HERO SECTION ─────────────────────────────────────────────────────── -->
+<section class="hero-section" id="home">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-glow-3"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-particles" id="particles"></div>
+  
+  <div class="container hero-content text-center">
+    <div class="mb-4" data-aos="fade-down">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>Next-Gen AI Video & Design Studio</span>
+      </div>
+    </div>
+    
+    <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="100">
+      Turn Your Memories & Ideas Into<br>
+      <span class="hl">Cinematic 3D & AI Magic</span>
+    </h1>
+    
+    <div class="modern-divider"></div>
+    
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+      We create Emotional Memorial RIP Person Ai Videos, Dead Person Ai Videos and Viral Social Media Videos in 12+ Indian Language.
+    </p>
+    
+    <div class="hero-trust-chips" data-aos="fade-up" data-aos-delay="250">
+      <div class="trust-chip"><i class="fas fa-bolt text-cyan"></i> 4K Ultra HD Output</div>
+      <div class="trust-chip"><i class="fas fa-clock text-cyan"></i> 24-Hour Express Delivery</div>
+      <div class="trust-chip"><i class="fas fa-language text-cyan"></i> 12+ Regional Languages</div>
+      <div class="trust-chip"><i class="fas fa-shield-alt text-cyan"></i> 100% Satisfaction Guarantee</div>
+    </div>
+    
+    <div class="hero-ctas mt-4 d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+      <a href="#gallery" class="btn btn-primary-gradient px-4 py-3">
+        <i class="fas fa-play-circle"></i> Watch Demo Videos
+      </a>
+      <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa px-4 py-3">
+        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+      </a>
+      <a href="#pricing" class="btn btn-glass px-4 py-3">
+        <i class="fas fa-tags"></i> View Pricing Plans
+      </a>
+    </div>
+    
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+      <div class="hero-stat-card">
+        <div class="stat-num">500+</div>
+        <div class="stat-label"><i class="fas fa-users text-primary me-1"></i> Happy Clients</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label"><i class="fas fa-film text-cyan me-1"></i> Videos Created</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">12+</div>
+        <div class="stat-label"><i class="fas fa-globe text-primary me-1"></i> Languages</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">5.0★</div>
+        <div class="stat-label"><i class="fas fa-star text-warning me-1"></i> Top Rated</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-scroll">
+    <div class="scroll-dot"></div>
+    <span>SCROLL DOWN</span>
+  </div>
+</section>
+
+<!-- ── INFINITE RUNNING MARQUEE RIBBON ──────────────────────────────────── -->
+<div class="marquee-wrapper">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>⚡ 4K AI Video Creation</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🎬 3D Disney Pixar Animation</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🕊️ Emotional Memorial Tributes</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🎨 Wedding & Photo Album Design</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🚀 Viral YouTube & Instagram Reels</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🔒 100% Satisfaction Guarantee</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>⚡ 24h Express Turnaround</span><span class="m-dot"></span></div>
+    <!-- Duplicate for seamless infinite loop -->
+    <div class="marquee-item"><span>⚡ 4K AI Video Creation</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🎬 3D Disney Pixar Animation</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🕊️ Emotional Memorial Tributes</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🎨 Wedding & Photo Album Design</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🚀 Viral YouTube & Instagram Reels</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>🔒 100% Satisfaction Guarantee</span><span class="m-dot"></span></div>
+    <div class="marquee-item"><span>⚡ 24h Express Turnaround</span><span class="m-dot"></span></div>
+  </div>
+</div>
+
+<!-- ── TRUST FEATURE STRIP ──────────────────────────────────────────────── -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-3 col-sm-6">
+        <div class="trust-feature-col">
+          <div class="trust-feature-icon"><i class="fas fa-headset"></i></div>
+          <div class="trust-feature-text">
+            <h6>24/7 VIP Support</h6>
+            <p>Direct WhatsApp help</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="trust-feature-col">
+          <div class="trust-feature-icon"><i class="fas fa-shipping-fast"></i></div>
+          <div class="trust-feature-text">
+            <h6>24-Hr Express Delivery</h6>
+            <p>Fast 4K download link</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="trust-feature-col">
+          <div class="trust-feature-icon"><i class="fas fa-check-double"></i></div>
+          <div class="trust-feature-text">
+            <h6>Designed With Approval</h6>
+            <p>Free revisions until happy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="trust-feature-col">
+          <div class="trust-feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="trust-feature-text">
+            <h6>100% Client Satisfaction</h6>
+            <p>Trusted by 500+ clients</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ME SECTION ─────────────────────────────────────────────────── -->
+<section class="section-pad section-alt" id="about">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="about-profile-card">
+          
+          <!-- Lokeshh's Profile Photo -->
+          <div class="profile-avatar-container">
+            <div class="profile-avatar-glow"></div>
+            <img src="{% static 'media_1787731791265.jpg' %}" alt="Lokeshh Patidar" class="profile-avatar-img">
+          </div>
+          
+          <h3 class="about-name">
+            Lokeshh Patidar <i class="fas fa-check-circle verified-badge" title="Verified Creator"></i>
+          </h3>
+          <p class="about-role">Senior AI Video Creator & Digital Designer</p>
+          
+          <div class="skills-tags-wrap">
+            <span class="skill-tag">🤖 3D Cartoon Animation</span>
+            <span class="skill-tag">🕊️ RIP Memoriam</span>
+            <span class="skill-tag">🎨 Album Design</span>
+            <span class="skill-tag">🎬 4K Video Editing</span>
+            <span class="skill-tag">🚀 Viral Reels & Shorts</span>
+          </div>
+          
+          <div class="about-mini-stats-grid">
+            <div class="about-mini-stat-card">
+              <div class="about-mini-num">500+</div>
+              <div class="about-mini-label">Clients Served</div>
+            </div>
+            <div class="about-mini-stat-card">
+              <div class="about-mini-num">1000+</div>
+              <div class="about-mini-label">Projects Done</div>
+            </div>
+            <div class="about-mini-stat-card">
+              <div class="about-mini-num">100%</div>
+              <div class="about-mini-label">Satisfaction</div>
+            </div>
+            <div class="about-mini-stat-card">
+              <div class="about-mini-num">24h</div>
+              <div class="about-mini-label">Turnaround</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="section-eyebrow">
+          <i class="fas fa-sparkles"></i> About The Creator
+        </div>
+        <h2 class="section-title">
+          Mastering the Art of <span class="gradient-text">Visual Storytelling</span>
+        </h2>
+        <div class="modern-divider start"></div>
+        
+        <p class="about-story">
+          Hi, I am <strong>Lokeshh Patidar</strong>. I help creators, businesses, and families bring their imaginations and cherished memories to life using state-of-the-art AI technology, Disney/Pixar-level 3D animations, cinema-grade editing, and high-impact graphic design.
+        </p>
+        
+        <div class="feature-pill-list">
+          <div class="feature-pill-item">
+            <div class="f-icon-box"><i class="fas fa-magic"></i></div>
+            <div class="f-text-box">
+              <h6>AI-Powered Cinema & 3D Cartoon Magic</h6>
+              <p>Realistic character animation, voice cloning, face restoration, and emotional tribute videos.</p>
+            </div>
+          </div>
+          <div class="feature-pill-item">
+            <div class="f-icon-box"><i class="fas fa-palette"></i></div>
+            <div class="f-text-box">
+              <h6>High-End Graphic & Album Design</h6>
+              <p>Stunning wedding albums, branding assets, social media banners, and print-ready creatives.</p>
+            </div>
+          </div>
+          <div class="feature-pill-item">
+            <div class="f-icon-box"><i class="fas fa-language"></i></div>
+            <div class="f-text-box">
+              <h6>12+ Indian Regional Languages</h6>
+              <p>Voiceovers and scripts customized in Hindi, Gujarati, Marathi, Punjabi, Tamil, Bengali & more.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-4 d-flex flex-wrap gap-3">
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa px-4">
+            <i class="fab fa-whatsapp"></i> WhatsApp Chat
+          </a>
+          <a href="{{ instagram_url }}" target="_blank" class="btn btn-insta px-4">
+            <i class="fab fa-instagram"></i> Instagram Profile
+          </a>
+          <a href="{% url 'services' %}" class="btn btn-glass px-4">
+            Explore All Services <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED DEMO GALLERY (WITH VIDEO THUMBNAILS & DIRECT YOUTUBE WATCH) ── -->
+<section class="section-pad section-dark" id="gallery">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <i class="fas fa-play"></i> Portfolio Showcase
+      </div>
+      <h2 class="section-title">
+        Featured <span class="gradient-text-cyan">Demo Gallery</span>
+      </h2>
+      <div class="modern-divider"></div>
+      <p class="text-muted max-w-600 mx-auto">
+        Click on any video to watch the full demo on YouTube or order a similar masterpiece on WhatsApp.
+      </p>
+    </div>
+    
+    <div class="row gy-4">
+      {% for video in videos %}
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            {% if video.thumbnail_url %}
+            <img src="{{ video.thumbnail_url }}" alt="{{ video.title }}" class="demo-thumb-img" onerror="this.src='https://img.youtube.com/vi/{{ video.video_id }}/hqdefault.jpg'">
+            {% else %}
+            <img src="https://img.youtube.com/vi/{{ video.video_id }}/hqdefault.jpg" alt="{{ video.title }}" class="demo-thumb-img">
+            {% endif %}
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> YouTube Demo</div>
+            <div class="demo-badge-top-right">4K HD</div>
+            <a href="{{ video.watch_url }}" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">{{ video.title }}</h5>
+            {% if video.description %}
+            <p class="demo-subtitle">{{ video.description }}</p>
+            {% else %}
+            <p class="demo-subtitle">Professional AI video creation with 4K clarity, custom voiceover, and cinema sound design.</p>
+            {% endif %}
+            <div class="demo-card-footer">
+              <a href="{{ video.watch_url }}" target="_blank" class="btn btn-glass btn-sm">
+                <i class="fab fa-youtube text-danger me-1"></i> Watch
+              </a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm">
+                <i class="fab fa-whatsapp me-1"></i> Order Similar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <!-- Fallback Demo 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="AI Creation Demo 1" class="demo-thumb-img">
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> 3D Cartoon</div>
+            <div class="demo-badge-top-right">4K HD</div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">Magical 3D Pixar Animation</h5>
+            <p class="demo-subtitle">Cinema-grade AI video with realistic facial animation and background score.</p>
+            <div class="demo-card-footer">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-glass btn-sm"><i class="fab fa-youtube text-danger me-1"></i> Watch</a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm"><i class="fab fa-whatsapp me-1"></i> Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fallback Demo 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="AI Creation Demo 2" class="demo-thumb-img">
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> Memorial</div>
+            <div class="demo-badge-top-right">4K HD</div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">Emotional RIP & Memoriam Tribute</h5>
+            <p class="demo-subtitle">3D Character generation with expressive emotional storytelling.</p>
+            <div class="demo-card-footer">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-glass btn-sm"><i class="fab fa-youtube text-danger me-1"></i> Watch</a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm"><i class="fab fa-whatsapp me-1"></i> Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fallback Demo 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="AI Creation Demo 3" class="demo-thumb-img">
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> Viral Reel</div>
+            <div class="demo-badge-top-right">4K HD</div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">Viral Instagram & YouTube Shorts</h5>
+            <p class="demo-subtitle">Fast-paced viral social media reels with glowing VFX and audio beat sync.</p>
+            <div class="demo-card-footer">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-glass btn-sm"><i class="fab fa-youtube text-danger me-1"></i> Watch</a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm"><i class="fab fa-whatsapp me-1"></i> Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="{{ youtube_url }}" target="_blank" class="btn btn-primary-gradient px-5 py-3">
+        <i class="fab fa-youtube me-2"></i> View Full Video Portfolio
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES SECTION ─────────────────────────────────────────────────── -->
+<section class="section-pad section-alt" id="services">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <i class="fas fa-layer-group"></i> What We Offer
+      </div>
+      <h2 class="section-title">
+        Premium Creative <span class="gradient-text">Services</span>
+      </h2>
+      <div class="modern-divider"></div>
+      <p class="text-muted max-w-600 mx-auto">
+        Tailored creative solutions engineered with advanced AI tools and human artistry for maximum impact.
+      </p>
+    </div>
+    
+    <div class="row gy-4">
+      {% for service in services %}
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="service-card h-100">
+          <div class="service-card-header">
+            <div class="service-icon-box">
+              <i class="fas {{ service.icon }}"></i>
+            </div>
+            <span class="service-badge-pill">
+              {% if forloop.first %}Featured{% elif forloop.counter == 2 %}Trending{% else %}AI Magic{% endif %}
+            </span>
+          </div>
+          
+          <h4 class="service-title">{{ service.title }}</h4>
+          <p class="service-desc">{{ service.description }}</p>
+          
+          <div class="service-footer">
+            <a href="{{ whatsapp_url }}" target="_blank" class="service-link">
+              <span>Get Instant Quote</span> <i class="fas fa-arrow-right"></i>
+            </a>
+            <i class="fab fa-whatsapp text-success fs-5"></i>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100">
+          <div class="service-card-header">
+            <div class="service-icon-box"><i class="fas fa-robot"></i></div>
+            <span class="service-badge-pill">Top Pick</span>
+          </div>
+          <h4 class="service-title">3D Cartoon & AI Video Creation</h4>
+          <p class="service-desc">Custom 3D Disney/Pixar style animated videos, kids stories, character animation, and voiceovers.</p>
+          <div class="service-footer">
+            <a href="{{ whatsapp_url }}" target="_blank" class="service-link"><span>Get Quote</span> <i class="fas fa-arrow-right"></i></a>
+            <i class="fab fa-whatsapp text-success fs-5"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100">
+          <div class="service-card-header">
+            <div class="service-icon-box"><i class="fas fa-dove"></i></div>
+            <span class="service-badge-pill">Emotional</span>
+          </div>
+          <h4 class="service-title">RIP & Memorial AI Tributes</h4>
+          <p class="service-desc">Emotional tribute videos with photo animation, heaven background scenery, and touching voiceover.</p>
+          <div class="service-footer">
+            <a href="{{ whatsapp_url }}" target="_blank" class="service-link"><span>Get Quote</span> <i class="fas fa-arrow-right"></i></a>
+            <i class="fab fa-whatsapp text-success fs-5"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100">
+          <div class="service-card-header">
+            <div class="service-icon-box"><i class="fas fa-images"></i></div>
+            <span class="service-badge-pill">4K HD</span>
+          </div>
+          <h4 class="service-title">Wedding Album & Graphic Design</h4>
+          <p class="service-desc">Luxury wedding album layouts, photo enhancement, face restoration, and social media branding.</p>
+          <div class="service-footer">
+            <a href="{{ whatsapp_url }}" target="_blank" class="service-link"><span>Get Quote</span> <i class="fas fa-arrow-right"></i></a>
+            <i class="fab fa-whatsapp text-success fs-5"></i>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING PACKAGES (NO SCANNER) ────────────────────────────────────── -->
+<section class="section-pad section-dark" id="pricing">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <i class="fas fa-tags"></i> Transparent Packages
+      </div>
+      <h2 class="section-title">
+        Flexible & Affordable <span class="gradient-text">Pricing</span>
+      </h2>
+      <div class="modern-divider"></div>
+      <p class="text-muted max-w-600 mx-auto">
+        Transparent packages tailored for individuals, creators, and businesses with zero hidden costs.
+      </p>
+    </div>
+    
+    <div class="row gy-4 justify-content-center">
+      {% for pkg in packages %}
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="pricing-card h-100 {% if pkg.is_featured %}pricing-featured{% endif %}">
+          {% if pkg.is_featured %}
+          <div class="pricing-badge-popular">
+            ⭐ Most Popular / Recommended
+          </div>
+          {% endif %}
+          
+          <div class="pricing-header">
+            <h4 class="pricing-name">{{ pkg.name }}</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span>
+              <span class="price-min">{{ pkg.price_min }}</span>
+              <span class="price-sep">– ₹</span>
+              <span class="price-max">{{ pkg.price_max }}</span>
+            </div>
+          </div>
+          
+          {% if pkg.description %}
+          <p class="pricing-desc">{{ pkg.description }}</p>
+          {% endif %}
+          
+          {% if pkg.get_features_list %}
+          <ul class="pricing-features">
+            {% for f in pkg.get_features_list %}
+            <li><i class="fas fa-check-circle"></i> {{ f }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          
+          <a href="{{ whatsapp_url }}" target="_blank" 
+             class="btn {% if pkg.is_featured %}btn-primary-gradient{% else %}btn-wa{% endif %} w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book {{ pkg.name }}
+          </a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card h-100">
+          <div class="pricing-header">
+            <h4 class="pricing-name">Starter AI Video</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span><span class="price-min">499</span><span class="price-sep">– ₹</span><span class="price-max">999</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Up to 60 Seconds AI Video</li>
+            <li><i class="fas fa-check-circle"></i> 1080p Full HD Resolution</li>
+            <li><i class="fas fa-check-circle"></i> Background Music & Voiceover</li>
+            <li><i class="fas fa-check-circle"></i> 24-Hour Express Delivery</li>
+          </ul>
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book Starter Plan
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card h-100 pricing-featured">
+          <div class="pricing-badge-popular">⭐ Recommended</div>
+          <div class="pricing-header">
+            <h4 class="pricing-name">Pro 3D & 4K Cinema</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span><span class="price-min">1499</span><span class="price-sep">– ₹</span><span class="price-max">2999</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> 3D Pixar Animation / Tribute</li>
+            <li><i class="fas fa-check-circle"></i> 4K Ultra HD Cinema Quality</li>
+            <li><i class="fas fa-check-circle"></i> Voice Cloning & Custom Scripts</li>
+            <li><i class="fas fa-check-circle"></i> Unlimited Free Revisions</li>
+          </ul>
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-primary-gradient w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book Pro 4K Plan
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card h-100">
+          <div class="pricing-header">
+            <h4 class="pricing-name">Elite VIP Retainer</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span><span class="price-min">4999</span><span class="price-sep">– ₹</span><span class="price-max">9999</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Bulk Videos / Full Channel Support</li>
+            <li><i class="fas fa-check-circle"></i> Priority Same-Day Delivery</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated WhatsApp Line</li>
+            <li><i class="fas fa-check-circle"></i> Complete Social Media Strategy</li>
+          </ul>
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book VIP Plan
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-4">
+      <small class="text-muted">
+        <i class="fas fa-shield-alt text-primary me-1"></i> Custom requirements or bulk orders? Reach out directly on WhatsApp for special discounts.
+      </small>
+    </div>
+  </div>
+</section>
+
+<!-- ── MULTILINGUAL SUPPORT ─────────────────────────────────────────────── -->
+<section class="section-pad section-alt" id="languages">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <i class="fas fa-globe-asia"></i> Multilingual Studio
+      </div>
+      <h2 class="section-title">
+        We Speak <span class="gradient-text-cyan">Your Language</span>
+      </h2>
+      <div class="modern-divider"></div>
+      <p class="text-muted max-w-600 mx-auto">
+        All our AI videos, voiceovers, and creatives are natively scripted and produced in your regional language.
+      </p>
+    </div>
+    
+    <div class="lang-grid" data-aos="fade-up">
+      {% for lang in languages %}
+      <div class="lang-chip">
+        <span class="lang-flag">🇮🇳</span>
+        <span>{{ lang }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS / REVIEWS ───────────────────────────────────────────── -->
+<section class="section-pad section-dark" id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <i class="fas fa-heart"></i> Client Testimonials
+      </div>
+      <h2 class="section-title">
+        Loved by Over <span class="gradient-text-gold">500+ Clients</span>
+      </h2>
+      <div class="modern-divider"></div>
+      <p class="text-muted max-w-600 mx-auto">
+        Read real feedback from happy clients who trusted us with their memories and projects.
+      </p>
+    </div>
+    
+    <div class="row gy-4">
+      {% for t in testimonials %}
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="testimonial-card h-100">
+          <div class="test-stars">
+            {% for i in "12345" %}
+              {% if forloop.counter <= t.rating %}
+                <i class="fas fa-star"></i>
+              {% else %}
+                <i class="far fa-star text-secondary"></i>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="test-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="test-message">"{{ t.message }}"</p>
+          
+          <div class="test-client-box">
+            <div class="test-avatar">{{ t.client_name|first }}</div>
+            <div>
+              <div class="test-client-name">{{ t.client_name }}</div>
+              {% if t.client_location %}
+              <small class="test-client-loc"><i class="fas fa-map-marker-alt text-primary me-1"></i>{{ t.client_location }}</small>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="test-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="test-message">"Lokeshh created a stunning video for our channel. The animations and voiceover quality were top-notch. Delivered in less than 24 hours!"</p>
+          <div class="test-client-box">
+            <div class="test-avatar">R</div>
+            <div>
+              <div class="test-client-name">Rohit Verma</div>
+              <small class="test-client-loc"><i class="fas fa-map-marker-alt text-primary me-1"></i>Mumbai, India</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="test-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="test-message">"The memorial tribute video made for my grandfather brought tears to our eyes. So respectful, beautiful, and emotionally touching. Thank you Lokeshh!"</p>
+          <div class="test-client-box">
+            <div class="test-avatar">P</div>
+            <div>
+              <div class="test-client-name">Pooja Sharma</div>
+              <small class="test-client-loc"><i class="fas fa-map-marker-alt text-primary me-1"></i>Indore, India</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="test-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="test-message">"Super fast response on WhatsApp. Got instant delivery and the 4K album designs were cinema quality."</p>
+          <div class="test-client-box">
+            <div class="test-avatar">A</div>
+            <div>
+              <div class="test-client-name">Amit Patel</div>
+              <small class="test-client-loc"><i class="fas fa-map-marker-alt text-primary me-1"></i>Ahmedabad, India</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT & LEAD INQUIRY FORM ──────────────────────────────────────── -->
+<section class="section-pad section-alt" id="contact">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <i class="fas fa-envelope-open-text"></i> Let's Collaborate
+      </div>
+      <h2 class="section-title">
+        Get In Touch <span class="gradient-text">With Us</span>
+      </h2>
+      <div class="modern-divider"></div>
+      <p class="text-muted max-w-600 mx-auto">
+        Have a project in mind or want a custom quote? Reach out directly via WhatsApp, Phone, or send an inquiry below.
+      </p>
+    </div>
+    
+    <div class="row gy-5 justify-content-center">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="contact-hub-card h-100 d-flex flex-column">
+          <h4 class="mb-4 text-white font-weight-bold">Direct Connect Hub</h4>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <span class="ci-label">Phone Call</span>
+              <a href="{{ call_url }}" class="ci-value">{{ site.phone }}</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <span class="ci-label">WhatsApp Quick Chat</span>
+              <a href="{{ whatsapp_url }}" target="_blank" class="ci-value">+91 {{ site.phone }}</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box insta-box"><i class="fab fa-instagram"></i></div>
+            <div>
+              <span class="ci-label">Instagram Profile</span>
+              <a href="{{ instagram_url }}" target="_blank" class="ci-value">@lokeshh_ai_tools</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box yt-box"><i class="fab fa-youtube"></i></div>
+            <div>
+              <span class="ci-label">YouTube Channel</span>
+              <a href="{{ youtube_url }}" target="_blank" class="ci-value">@lokeshh_ai_tools</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="ci-label">Email Support</span>
+              <a href="mailto:{{ site.email }}" class="ci-value">{{ site.email }}</a>
+            </div>
+          </div>
+          
+          <div class="mt-auto pt-4">
+            <div class="p-3 glass-card rounded-3 mb-3 border-0 bg-dark">
+              <small class="text-muted d-block"><i class="fas fa-clock text-cyan me-1"></i> Working Hours: 9:00 AM – 10:00 PM IST</small>
+              <small class="text-muted d-block mt-1"><i class="fas fa-reply text-success me-1"></i> Typical response time: Under 15 minutes</small>
+            </div>
+            <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa w-100 py-3">
+              <i class="fab fa-whatsapp me-2"></i> Start WhatsApp Conversation
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="contact-form-card">
+          <h4 class="mb-4 text-white font-weight-bold">Send Instant Inquiry</h4>
+          <form id="leadForm" method="post" action="{% url 'submit_lead' %}">
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6 mb-2">
+                <label class="form-label">Full Name <span class="text-primary">*</span></label>
+                <input type="text" name="name" class="form-control custom-input" placeholder="e.g. Rahul Sharma" required>
+              </div>
+              <div class="col-md-6 mb-2">
+                <label class="form-label">WhatsApp / Mobile Number <span class="text-primary">*</span></label>
+                <input type="tel" name="mobile" class="form-control custom-input" placeholder="10-digit Mobile Number" pattern="[0-9]{10,15}" required>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Email Address <span class="text-primary">*</span></label>
+              <input type="email" name="email" class="form-control custom-input" placeholder="yourname@gmail.com" required>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Project Requirement / Video Details <span class="text-primary">*</span></label>
+              <textarea name="requirement" class="form-control custom-input" rows="4" placeholder="Tell us about the project: AI 3D video type, language, album design, length, deadlines, etc." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary-gradient w-100 py-3" id="submitBtn">
+              <i class="fas fa-paper-plane me-2"></i> Send My Inquiry Now
+            </button>
+            
+            <div id="formMsg" class="mt-3 d-none"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Saving & Connecting...';
+  
+  try {
+    const res = await fetch('{% url "submit_lead" %}', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+    const data = await res.json();
+    if (data.success) {
+      msg.className = 'mt-3 alert alert-success glass-card border-0 p-3';
+      msg.innerHTML = `
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-check-circle text-success fs-4 me-2"></i>
+          <strong class="text-white fs-6">✅ Inquiry Saved Successfully!</strong>
+        </div>
+        <p class="small text-light mb-3">Your project details are saved. Redirecting to WhatsApp so Lokeshh receives your message immediately:</p>
+        <a href="${data.wa_url}" target="_blank" class="btn btn-wa w-100 py-3 shadow-lg" id="directWaLink">
+          <i class="fab fa-whatsapp fs-5 me-2"></i> Send Directly on WhatsApp
+        </a>
+      `;
+      msg.classList.remove('d-none');
+      this.reset();
+      
+      // Auto open WhatsApp with the pre-filled inquiry details
+      setTimeout(function() {
+        window.open(data.wa_url, '_blank');
+      }, 500);
+    } else {
+      msg.className = 'mt-3 alert alert-danger';
+      msg.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> Please check all fields and try again.';
+      msg.classList.remove('d-none');
+    }
+  } catch (err) {
+    msg.className = 'mt-3 alert alert-danger';
+    msg.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> Network error. Please contact directly via WhatsApp or phone.';
+    msg.classList.remove('d-none');
+  }
+  
+  btn.disabled = false;
+  btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Send My Inquiry Now';
+});
+</script>
+{% endblock %}

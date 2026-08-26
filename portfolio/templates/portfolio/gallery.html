@@ -1,0 +1,152 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Video Gallery & Portfolio | Lokeshh Ai Tools{% endblock %}
+{% block content %}
+
+<!-- ── PAGE HERO ────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="hero-glow-1"></div>
+  <div class="container text-center hero-content" data-aos="fade-up">
+    <div class="section-eyebrow">
+      <i class="fas fa-play-circle"></i> Work Showcase
+    </div>
+    <h1 class="section-title">
+      Our 3D & AI Video <span class="gradient-text-cyan">Masterpieces</span>
+    </h1>
+    <div class="modern-divider"></div>
+    <p class="text-muted max-w-600 mx-auto">
+      Explore high-definition samples of our AI character generation, 3D animations, memoriam tributes, and viral social edits.
+    </p>
+  </div>
+</section>
+
+<!-- ── GALLERY GRID ─────────────────────────────────────────────────────── -->
+<section class="section-pad section-dark">
+  <div class="container">
+    <div class="row gy-4">
+      {% for video in videos %}
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            {% if video.thumbnail_url %}
+            <img src="{{ video.thumbnail_url }}" alt="{{ video.title }}" class="demo-thumb-img" onerror="this.src='https://img.youtube.com/vi/{{ video.video_id }}/hqdefault.jpg'">
+            {% else %}
+            <img src="https://img.youtube.com/vi/{{ video.video_id }}/hqdefault.jpg" alt="{{ video.title }}" class="demo-thumb-img">
+            {% endif %}
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> YouTube Demo</div>
+            <div class="demo-badge-top-right">4K HD</div>
+            <a href="{{ video.watch_url }}" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">{{ video.title }}</h5>
+            {% if video.description %}
+            <p class="demo-subtitle">{{ video.description }}</p>
+            {% else %}
+            <p class="demo-subtitle">Professional AI video creation with 4K clarity, custom voiceover, and cinema sound design.</p>
+            {% endif %}
+            <div class="demo-card-footer">
+              <a href="{{ video.watch_url }}" target="_blank" class="btn btn-glass btn-sm">
+                <i class="fab fa-youtube text-danger me-1"></i> Watch Video
+              </a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm">
+                <i class="fab fa-whatsapp me-1"></i> Order Similar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <!-- Demo 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="3D Disney Pixar AI Animation" class="demo-thumb-img">
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> 3D Cartoon</div>
+            <div class="demo-badge-top-right">4K 60FPS</div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">Magical 3D Pixar Animation</h5>
+            <p class="demo-subtitle">Pixar-style 3D animated character with magical glowing landscape and custom voiceover.</p>
+            <div class="demo-card-footer">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-glass btn-sm">
+                <i class="fab fa-youtube text-danger me-1"></i> Watch Video
+              </a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm">
+                <i class="fab fa-whatsapp me-1"></i> Order Similar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Demo 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="RIP & Memorial AI Tribute" class="demo-thumb-img">
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> Memorial</div>
+            <div class="demo-badge-top-right">Ultra HD</div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">Emotional RIP & Memoriam Tribute</h5>
+            <p class="demo-subtitle">Touching photo-to-animation tribute video with spiritual background music and emotional storyline.</p>
+            <div class="demo-card-footer">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-glass btn-sm">
+                <i class="fab fa-youtube text-danger me-1"></i> Watch Video
+              </a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm">
+                <i class="fab fa-whatsapp me-1"></i> Order Similar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Demo 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="demo-video-card h-100">
+          <div class="demo-thumb-container">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Viral Social Media Reel" class="demo-thumb-img">
+            <div class="demo-badge-top-left"><i class="fab fa-youtube text-danger me-1"></i> Viral Reel</div>
+            <div class="demo-badge-top-right">Trending</div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="demo-play-overlay" title="Watch on YouTube">
+              <div class="demo-play-btn"><i class="fas fa-play"></i></div>
+            </a>
+          </div>
+          <div class="demo-card-body">
+            <h5 class="demo-title">Viral Instagram & YouTube Shorts</h5>
+            <p class="demo-subtitle">High-octane AI video edit with glowing VFX, dynamic transitions, and viral beat synchronization.</p>
+            <div class="demo-card-footer">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-glass btn-sm">
+                <i class="fab fa-youtube text-danger me-1"></i> Watch Video
+              </a>
+              <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa btn-sm">
+                <i class="fab fa-whatsapp me-1"></i> Order Similar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-5 d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up">
+      <a href="{{ youtube_url }}" target="_blank" class="btn btn-primary-gradient px-5 py-3">
+        <i class="fab fa-youtube me-2"></i> Visit Official YouTube Channel
+      </a>
+      <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa px-5 py-3">
+        <i class="fab fa-whatsapp me-2"></i> Custom Video Requirements? Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Contact & Inquiries | Lokeshh Ai Tools{% endblock %}
+{% block content %}
+
+<!-- ── PAGE HERO ────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="hero-glow-1"></div>
+  <div class="container text-center hero-content" data-aos="fade-up">
+    <div class="section-eyebrow">
+      <i class="fas fa-paper-plane"></i> Reach Out To Us
+    </div>
+    <h1 class="section-title">
+      Let's Start <span class="gradient-text">Something Great</span>
+    </h1>
+    <div class="modern-divider"></div>
+    <p class="text-muted max-w-600 mx-auto">
+      Have a question, a custom video project, or want to discuss terms? We're available 7 days a week.
+    </p>
+  </div>
+</section>
+
+<!-- ── CONTACT & INQUIRY FORM ───────────────────────────────────────────── -->
+<section class="section-pad section-dark">
+  <div class="container">
+    <div class="row gy-5 justify-content-center">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="contact-hub-card h-100 d-flex flex-column">
+          <h4 class="mb-4 text-white font-weight-bold">Direct Connect Hub</h4>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <span class="ci-label">Direct Phone Call</span>
+              <a href="{{ call_url }}" class="ci-value">{{ site.phone }}</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <span class="ci-label">Instant WhatsApp Chat</span>
+              <a href="{{ whatsapp_url }}" target="_blank" class="ci-value">+91 {{ site.phone }}</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box insta-box"><i class="fab fa-instagram"></i></div>
+            <div>
+              <span class="ci-label">Instagram Profile</span>
+              <a href="{{ instagram_url }}" target="_blank" class="ci-value">@lokeshh_ai_tools</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box yt-box"><i class="fab fa-youtube"></i></div>
+            <div>
+              <span class="ci-label">YouTube Channel</span>
+              <a href="{{ youtube_url }}" target="_blank" class="ci-value">@lokeshh_ai_tools</a>
+            </div>
+          </div>
+          
+          <div class="contact-item-row">
+            <div class="ci-icon-box"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="ci-label">Email Support</span>
+              <a href="mailto:{{ site.email }}" class="ci-value">{{ site.email }}</a>
+            </div>
+          </div>
+          
+          <div class="mt-auto pt-4">
+            <div class="p-3 glass-card rounded-3 mb-3 border-0 bg-dark">
+              <small class="text-muted d-block"><i class="fas fa-clock text-cyan me-1"></i> Working Hours: 9:00 AM – 10:00 PM IST</small>
+              <small class="text-muted d-block mt-1"><i class="fas fa-bolt text-warning me-1"></i> Fast Turnaround for Urgent Orders</small>
+            </div>
+            <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa w-100 py-3">
+              <i class="fab fa-whatsapp me-2"></i> Start WhatsApp Conversation
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="contact-form-card">
+          <h4 class="mb-4 text-white font-weight-bold">Send An Inquiry</h4>
+          <form id="contactLeadForm" method="post" action="{% url 'submit_lead' %}">
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6 mb-2">
+                <label class="form-label">Full Name <span class="text-primary">*</span></label>
+                <input type="text" name="name" class="form-control custom-input" placeholder="e.g. Rahul Sharma" required>
+              </div>
+              <div class="col-md-6 mb-2">
+                <label class="form-label">WhatsApp / Mobile Number <span class="text-primary">*</span></label>
+                <input type="tel" name="mobile" class="form-control custom-input" placeholder="10-digit Mobile Number" pattern="[0-9]{10,15}" required>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Email Address <span class="text-primary">*</span></label>
+              <input type="email" name="email" class="form-control custom-input" placeholder="yourname@gmail.com" required>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Project Requirement / Video Details <span class="text-primary">*</span></label>
+              <textarea name="requirement" class="form-control custom-input" rows="4" placeholder="Tell us about the project: AI 3D video type, language, album design, length, deadlines, etc." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary-gradient w-100 py-3" id="contactSubmitBtn">
+              <i class="fas fa-paper-plane me-2"></i> Submit Inquiry Now
+            </button>
+            
+            <div id="contactFormMsg" class="mt-3 d-none"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('contactLeadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contactSubmitBtn');
+  const msg = document.getElementById('contactFormMsg');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Saving & Connecting...';
+  
+  try {
+    const res = await fetch('{% url "submit_lead" %}', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+    const data = await res.json();
+    if (data.success) {
+      msg.className = 'mt-3 alert alert-success glass-card border-0 p-3';
+      msg.innerHTML = `
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-check-circle text-success fs-4 me-2"></i>
+          <strong class="text-white fs-6">✅ Inquiry Saved Successfully!</strong>
+        </div>
+        <p class="small text-light mb-3">Your project details are saved. Redirecting to WhatsApp so Lokeshh receives your message immediately:</p>
+        <a href="${data.wa_url}" target="_blank" class="btn btn-wa w-100 py-3 shadow-lg" id="directWaLinkContact">
+          <i class="fab fa-whatsapp fs-5 me-2"></i> Send Directly on WhatsApp
+        </a>
+      `;
+      msg.classList.remove('d-none');
+      this.reset();
+      
+      // Auto open WhatsApp with the pre-filled inquiry details
+      setTimeout(function() {
+        window.open(data.wa_url, '_blank');
+      }, 500);
+    } else {
+      msg.className = 'mt-3 alert alert-danger';
+      msg.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> Please check all fields and try again.';
+      msg.classList.remove('d-none');
+    }
+  } catch (err) {
+    msg.className = 'mt-3 alert alert-danger';
+    msg.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i> Network error. Please contact directly via WhatsApp or phone.';
+    msg.classList.remove('d-none');
+  }
+  
+  btn.disabled = false;
+  btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Submit Inquiry Now';
+});
+</script>
+{% endblock %}

@@ -1,0 +1,138 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Pricing & Packages | Lokeshh Ai Tools{% endblock %}
+{% block content %}
+
+<!-- ── PAGE HERO ────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="hero-glow-1"></div>
+  <div class="container text-center hero-content" data-aos="fade-up">
+    <div class="section-eyebrow">
+      <i class="fas fa-tags"></i> Investment & Packages
+    </div>
+    <h1 class="section-title">
+      Simple & Transparent <span class="gradient-text">Pricing</span>
+    </h1>
+    <div class="modern-divider"></div>
+    <p class="text-muted max-w-600 mx-auto">
+      Affordable high-impact creative services designed for every budget with free revisions and 24-hour delivery.
+    </p>
+  </div>
+</section>
+
+<!-- ── PRICING CARDS ────────────────────────────────────────────────────── -->
+<section class="section-pad section-dark">
+  <div class="container">
+    <div class="row gy-4 justify-content-center">
+      {% for pkg in packages %}
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="pricing-card h-100 {% if pkg.is_featured %}pricing-featured{% endif %}">
+          {% if pkg.is_featured %}
+          <div class="pricing-badge-popular">
+            ⭐ Most Popular / Recommended
+          </div>
+          {% endif %}
+          
+          <div class="pricing-header">
+            <h4 class="pricing-name">{{ pkg.name }}</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span>
+              <span class="price-min">{{ pkg.price_min }}</span>
+              <span class="price-sep">– ₹</span>
+              <span class="price-max">{{ pkg.price_max }}</span>
+            </div>
+          </div>
+          
+          {% if pkg.description %}
+          <p class="pricing-desc">{{ pkg.description }}</p>
+          {% endif %}
+          
+          {% if pkg.get_features_list %}
+          <ul class="pricing-features">
+            {% for f in pkg.get_features_list %}
+            <li><i class="fas fa-check-circle"></i> {{ f }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          
+          <a href="{{ whatsapp_url }}" target="_blank"
+             class="btn {% if pkg.is_featured %}btn-primary-gradient{% else %}btn-wa{% endif %} w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book {{ pkg.name }}
+          </a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card h-100">
+          <div class="pricing-header">
+            <h4 class="pricing-name">Starter AI Video</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span><span class="price-min">499</span><span class="price-sep">– ₹</span><span class="price-max">999</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Up to 60 Seconds AI Video</li>
+            <li><i class="fas fa-check-circle"></i> 1080p Full HD Resolution</li>
+            <li><i class="fas fa-check-circle"></i> Background Music & Voiceover</li>
+            <li><i class="fas fa-check-circle"></i> 24-Hour Express Delivery</li>
+          </ul>
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book Starter Plan
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card h-100 pricing-featured">
+          <div class="pricing-badge-popular">⭐ Recommended</div>
+          <div class="pricing-header">
+            <h4 class="pricing-name">Pro 3D & 4K Cinema</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span><span class="price-min">1499</span><span class="price-sep">– ₹</span><span class="price-max">2999</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> 3D Pixar Animation / Tribute</li>
+            <li><i class="fas fa-check-circle"></i> 4K Ultra HD Cinema Quality</li>
+            <li><i class="fas fa-check-circle"></i> Voice Cloning & Custom Scripts</li>
+            <li><i class="fas fa-check-circle"></i> Unlimited Free Revisions</li>
+          </ul>
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-primary-gradient w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book Pro 4K Plan
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card h-100">
+          <div class="pricing-header">
+            <h4 class="pricing-name">Elite VIP Retainer</h4>
+            <div class="pricing-range">
+              <span class="price-currency">₹</span><span class="price-min">4999</span><span class="price-sep">– ₹</span><span class="price-max">9999</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Bulk Videos / Full Channel Support</li>
+            <li><i class="fas fa-check-circle"></i> Priority Same-Day Delivery</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated WhatsApp Line</li>
+            <li><i class="fas fa-check-circle"></i> Complete Social Media Strategy</li>
+          </ul>
+          <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-wa w-100 mt-auto py-3">
+            <i class="fab fa-whatsapp me-2"></i> Book VIP Plan
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="p-4 glass-card rounded-4 mt-5 text-center max-w-700 mx-auto" data-aos="fade-up">
+      <h6 class="text-white mb-2"><i class="fas fa-gift text-cyan me-2"></i> Custom Bulk & Monthly Retainers Available</h6>
+      <p class="text-muted small mb-3">
+        Are you a YouTube channel owner or business looking for regular video edits and 3D animations? We offer special creator packages.
+      </p>
+      <a href="{{ whatsapp_url }}" target="_blank" class="btn btn-glass btn-sm px-4">
+        <i class="fab fa-whatsapp me-1"></i> Inquire for Custom Retainer
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
