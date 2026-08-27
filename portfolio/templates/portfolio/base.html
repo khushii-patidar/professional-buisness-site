@@ -57,17 +57,7 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'pricing' %}">Pricing</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link insta-nav-icon" href="{{ instagram_url }}" target="_blank" title="Follow on Instagram">
-            <i class="fab fa-instagram fs-5"></i>
-          </a>
-        </li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link yt-nav-icon" href="{{ youtube_url }}" target="_blank" title="Subscribe on YouTube">
-            <i class="fab fa-youtube fs-5"></i>
-          </a>
-        </li>
-        <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
           <a class="btn btn-wa btn-sm px-4" href="{{ whatsapp_url }}" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp Now
           </a>
@@ -125,8 +115,6 @@
           <li><a href="{% url 'gallery' %}"><i class="fas fa-angle-right small text-primary"></i> Video Gallery</a></li>
           <li><a href="{% url 'pricing' %}"><i class="fas fa-angle-right small text-primary"></i> Pricing Plans</a></li>
           <li><a href="{% url 'contact' %}"><i class="fas fa-angle-right small text-primary"></i> Contact Us</a></li>
-          <li><a href="{{ instagram_url }}" target="_blank"><i class="fab fa-instagram small text-primary"></i> Instagram</a></li>
-          <li><a href="{{ youtube_url }}" target="_blank"><i class="fab fa-youtube small text-primary"></i> YouTube</a></li>
         </ul>
       </div>
       
@@ -174,7 +162,6 @@
 <!-- ── FLOATING ACTION BUTTONS ──────────────────────────────────────────── -->
 <div class="floating-actions">
   <button class="fab-btn fab-top" id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
-  <a href="{{ instagram_url }}" target="_blank" class="fab-btn fab-insta" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
   <a href="{{ whatsapp_url }}" target="_blank" class="fab-btn fab-wa" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <a href="{{ call_url }}" class="fab-btn fab-call" title="Call Now"><i class="fas fa-phone"></i></a>
 </div>

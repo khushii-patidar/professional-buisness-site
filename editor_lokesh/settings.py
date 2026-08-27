@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -51,12 +52,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'editor_lokesh.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES = { 'default': dj_database_url.config( default=os.environ.get('DATABASE_URL'), conn_max_age=600 ) }
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -74,9 +70,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'portfolio' / 'static',
-    Path(r"C:/Users/Ambika/.gemini/antigravity/brain/22e7b667-f30e-421f-b916-5ffa7809c43d"),
-    Path(r"C:/Users/Ambika/.gemini/antigravity/brain/22e7b667-f30e-421f-b916-5ffa7809c43d/.user_uploaded"),
 ]
+_extra_dir = Path(r"C:/Users/Ambika/.gemini/antigravity/brain/22e7b667-f30e-421f-b916-5ffa7809c43d/.user_uploaded")
+if _extra_dir.exists():
+    STATICFILES_DIRS.append(_extra_dir)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
@@ -99,3 +96,6 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'lokeshhaitools@gmail.com')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'lokeshhaitools@gmail.com')
 ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL', 'lokeshhaitools@gmail.com')
+
+STATIC_URL = "/static/"
+STATIC_ROOT= BASE_DIR / "staticfiles"
