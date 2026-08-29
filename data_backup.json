@@ -1,394 +1,394 @@
-[
-{
-  "model": "auth.user",
-  "fields": {
-    "password": "pbkdf2_sha256$1000000$17WLHKle0GYX632KkSoNKL$KK31AyRv95cfJQ1mskb/6+BplJni571zlEk0snGyD0w=",
-    "last_login": "2026-08-26T13:13:36.396Z",
-    "is_superuser": true,
-    "username": "Lokeshh_Ai_Tools",
-    "first_name": "",
-    "last_name": "",
-    "email": "lokeshpatidarforyou@gmail.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2026-08-19T16:08:12.014Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "38fsh8jujoe3i9hrw0vgsczvzlzvn7va",
-  "fields": {
-    "session_data": ".eJxVjMsOgjAQAP9lz6bpsoW1HL3zDU23D4uaklA4Gf_dkHDQ68xk3uD8vhW3t7S6OcIICJdfJj48Uz1EfPh6X1RY6rbOoo5EnbapaYnpdTvbv0HxrcAIxIYxGxQOdA3UDcxJZyIkK5kiSrbUU9bWS9ShMywig84Wg-mjZQOfL8h2N3E:1wzDRg:EVilqKS_MzlyXd_UvTg5fc1oRlIocXM4yTyBP5hGNYo",
-    "expire_date": "2026-09-09T13:13:36.418Z"
-  }
-},
-{
-  "model": "portfolio.service",
-  "pk": 1,
-  "fields": {
-    "title": "AI Creation",
-    "description": "Cutting-edge AI-powered content creation including images, videos, and animations that bring your imagination to life with stunning realism.",
-    "icon": "fa-robot",
-    "order": 1,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.193Z"
-  }
-},
-{
-  "model": "portfolio.service",
-  "pk": 2,
-  "fields": {
-    "title": "Graphic Designing",
-    "description": "Premium graphic design for banners, posters, social media, logos, and all marketing materials with a professional touch.",
-    "icon": "fa-palette",
-    "order": 2,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.195Z"
-  }
-},
-{
-  "model": "portfolio.service",
-  "pk": 3,
-  "fields": {
-    "title": "Album Designing",
-    "description": "Beautifully crafted wedding, birthday and family photo albums with creative layouts that tell your story memorably.",
-    "icon": "fa-images",
-    "order": 3,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.196Z"
-  }
-},
-{
-  "model": "portfolio.service",
-  "pk": 4,
-  "fields": {
-    "title": "Video Editing",
-    "description": "Professional video editing with color grading, transitions, music sync, and cinematic effects for weddings, events and reels.",
-    "icon": "fa-film",
-    "order": 4,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.198Z"
-  }
-},
-{
-  "model": "portfolio.service",
-  "pk": 5,
-  "fields": {
-    "title": "YouTube Content Creation",
-    "description": "Complete YouTube channel management including thumbnails, intros, editing, and content strategy to grow your audience.",
-    "icon": "fa-youtube",
-    "order": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.199Z"
-  }
-},
-{
-  "model": "portfolio.service",
-  "pk": 6,
-  "fields": {
-    "title": "RIP AI Videos",
-    "description": "Heartfelt AI tribute videos to honor your loved ones, created with care, emotion and cutting-edge AI technology.",
-    "icon": "fa-video",
-    "order": 6,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.201Z"
-  }
-},
-{
-  "model": "portfolio.videodemo",
-  "pk": 1,
-  "fields": {
-    "title": "AI Creation Demo 1",
-    "youtube_url": "https://youtu.be/kr0hRZkkbKc",
-    "description": "",
-    "order": 1,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.202Z"
-  }
-},
-{
-  "model": "portfolio.videodemo",
-  "pk": 2,
-  "fields": {
-    "title": "AI Creation Demo 2",
-    "youtube_url": "https://youtu.be/p1ai08A3KL8",
-    "description": "",
-    "order": 2,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.204Z"
-  }
-},
-{
-  "model": "portfolio.videodemo",
-  "pk": 3,
-  "fields": {
-    "title": "AI Creation Demo 3",
-    "youtube_url": "https://youtu.be/pG0QbvTL4YA",
-    "description": "",
-    "order": 3,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.205Z"
-  }
-},
-{
-  "model": "portfolio.videodemo",
-  "pk": 4,
-  "fields": {
-    "title": "AI Creation Demo 4",
-    "youtube_url": "https://youtu.be/QzvsmBF6Y1Q",
-    "description": "",
-    "order": 4,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.207Z"
-  }
-},
-{
-  "model": "portfolio.videodemo",
-  "pk": 5,
-  "fields": {
-    "title": "AI Creation Demo 5",
-    "youtube_url": "https://youtu.be/umjkhWbmAtY",
-    "description": "",
-    "order": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.208Z"
-  }
-},
-{
-  "model": "portfolio.pricingpackage",
-  "pk": 1,
-  "fields": {
-    "name": "Basic Package",
-    "price_min": 2999,
-    "price_max": 6999,
-    "description": "Perfect for simple video creation",
-    "features": "HD Quality Video,Background Music,Basic Effects,2 Revisions,Fast Delivery",
-    "is_featured": false,
-    "order": 1,
-    "is_active": true
-  }
-},
-{
-  "model": "portfolio.pricingpackage",
-  "pk": 2,
-  "fields": {
-    "name": "Premium Package",
-    "price_min": 4999,
-    "price_max": 9999,
-    "description": "Professional quality with advanced AI effects",
-    "features": "4K Quality Video,Premium Music,Advanced AI Effects,5 Revisions,Priority Delivery,Color Grading",
-    "is_featured": true,
-    "order": 2,
-    "is_active": true
-  }
-},
-{
-  "model": "portfolio.pricingpackage",
-  "pk": 3,
-  "fields": {
-    "name": "Krishna Special",
-    "price_min": 4999,
-    "price_max": 14999,
-    "description": "Divine themed videos with special effects",
-    "features": "Divine Theme Design,Special AI Effects,Custom Music,Unlimited Revisions,Express Delivery",
-    "is_featured": false,
-    "order": 3,
-    "is_active": true
-  }
-},
-{
-  "model": "portfolio.pricingpackage",
-  "pk": 4,
-  "fields": {
-    "name": "Full Realistic",
-    "price_min": 14999,
-    "price_max": 34999,
-    "description": "Hyper-realistic AI video creation",
-    "features": "Hyper Realistic AI,Cinematic Quality,Custom Soundtrack,Unlimited Revisions,Commercial Rights",
-    "is_featured": false,
-    "order": 4,
-    "is_active": true
-  }
-},
-{
-  "model": "portfolio.pricingpackage",
-  "pk": 5,
-  "fields": {
-    "name": "Jain Family",
-    "price_min": 9999,
-    "price_max": 39999,
-    "description": "Complete family tribute with traditional elements",
-    "features": "Full Family Tribute,Traditional Elements,Multiple Videos,Photo Enhancement,Lifetime Storage",
-    "is_featured": false,
-    "order": 5,
-    "is_active": true
-  }
-},
-{
-  "model": "portfolio.testimonial",
-  "pk": 1,
-  "fields": {
-    "client_name": "Rajesh Sharma",
-    "client_location": "Indore, MP",
-    "message": "Lokeshh bhai ne meri maa ka RIP video bahut sundar banaya. Poori family ro padi. Bahut professional kaam! Highly recommended!",
-    "rating": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.218Z"
-  }
-},
-{
-  "model": "portfolio.testimonial",
-  "pk": 2,
-  "fields": {
-    "client_name": "Sunita Patel",
-    "client_location": "Ahmedabad, Gujarat",
-    "message": "Amazing work on our wedding album! The AI effects were stunning. Everyone loved it. Will definitely hire again!",
-    "rating": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.219Z"
-  }
-},
-{
-  "model": "portfolio.testimonial",
-  "pk": 3,
-  "fields": {
-    "client_name": "Amit Verma",
-    "client_location": "Jaipur, Rajasthan",
-    "message": "Mere YouTube channel ke liye bahut achi editing ki. Views 3x ho gaye. Lokeshh ji ka kaam satpratishat sahi hai!",
-    "rating": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.221Z"
-  }
-},
-{
-  "model": "portfolio.testimonial",
-  "pk": 4,
-  "fields": {
-    "client_name": "Priya Gupta",
-    "client_location": "Bhopal, MP",
-    "message": "The graphic designs were beyond my expectations. Fast delivery, great communication, top-notch quality. 10/10!",
-    "rating": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.222Z"
-  }
-},
-{
-  "model": "portfolio.testimonial",
-  "pk": 5,
-  "fields": {
-    "client_name": "Mohan Das",
-    "client_location": "Udaipur, Rajasthan",
-    "message": "Pitaji ki barsi ke liye ek bahut touching video banai. Ghar mein sabko bahut pasand aayi. Thank you Lokeshh ji!",
-    "rating": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.224Z"
-  }
-},
-{
-  "model": "portfolio.testimonial",
-  "pk": 6,
-  "fields": {
-    "client_name": "Kavita Singh",
-    "client_location": "Lucknow, UP",
-    "message": "My birthday album was absolutely gorgeous! AI effects made it look like a Bollywood production. Best money spent!",
-    "rating": 5,
-    "is_active": true,
-    "created_at": "2026-08-19T16:08:12.225Z"
-  }
-},
-{
-  "model": "portfolio.lead",
-  "pk": 1,
-  "fields": {
-    "name": "Khushi",
-    "mobile": "9340297224",
-    "email": "khushboopatidar888@gmail.com",
-    "requirement": "Bla bla bla bla bla",
-    "status": "new",
-    "notes": "",
-    "submitted_at": "2026-08-26T11:17:49.547Z"
-  }
-},
-{
-  "model": "portfolio.lead",
-  "pk": 2,
-  "fields": {
-    "name": "Jsjsjs",
-    "mobile": "9340297224",
-    "email": "khushboopatidar888@gmail.com",
-    "requirement": "FJajajakakakkakakakajajajaj",
-    "status": "new",
-    "notes": "",
-    "submitted_at": "2026-08-26T11:22:50.595Z"
-  }
-},
-{
-  "model": "portfolio.lead",
-  "pk": 3,
-  "fields": {
-    "name": "uytrewaesdrtfyghukj",
-    "mobile": "9340297224",
-    "email": "khushboopatidar888@gmail.com",
-    "requirement": "uytfgthjuikoiuytrdtyugihoj",
-    "status": "new",
-    "notes": "",
-    "submitted_at": "2026-08-26T11:35:55.535Z"
-  }
-},
-{
-  "model": "portfolio.lead",
-  "pk": 4,
-  "fields": {
-    "name": "asdfghj",
-    "mobile": "9340297224",
-    "email": "khushboopatidar888@gmail.com",
-    "requirement": "ytresdrftghjukiu87654wreadgxfhcgjgkhkfdj",
-    "status": "new",
-    "notes": "",
-    "submitted_at": "2026-08-26T11:48:44.245Z"
-  }
-},
-{
-  "model": "portfolio.lead",
-  "pk": 5,
-  "fields": {
-    "name": "ytyrewaertyu",
-    "mobile": "9340297224",
-    "email": "khushboopatidar888@gmail.com",
-    "requirement": "bla bla bla bla",
-    "status": "new",
-    "notes": "",
-    "submitted_at": "2026-08-26T12:08:41.406Z"
-  }
-},
-{
-  "model": "portfolio.lead",
-  "pk": 6,
-  "fields": {
-    "name": "khushi",
-    "mobile": "9340297224",
-    "email": "khushboopatidar888@gmail.com",
-    "requirement": "bla bla bla bla",
-    "status": "new",
-    "notes": "",
-    "submitted_at": "2026-08-26T12:54:56.303Z"
-  }
-},
-{
-  "model": "portfolio.sitesettings",
-  "pk": 1,
-  "fields": {
-    "hero_headline": "Bring Your Memories to Life with AI Magic",
-    "hero_subheadline": "Professional AI Video Creation, Graphic Design & Video Editing",
-    "about_text": "Lokeshh Patidar is a creative professional specializing in AI-powered video creation, graphic design, album designing, and premium video editing. With a passion for storytelling and cutting-edge technology, Lokeshh transforms your precious memories into breathtaking visual experiences that last forever.",
-    "phone": "7803863255",
-    "email": "lokeshhaitools@gmail.com",
-    "whatsapp_number": "917803863255",
-    "whatsapp_message": "Hi Lokeshh, I am interested in your work.",
-    "meta_title": "Lokeshh Ai Tools | AI Video Creation & Graphic Design",
-    "meta_description": "Professional AI video creation, graphic design, album designing & video editing by Lokeshh Patidar."
-  }
-}
-]
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$17WLHKle0GYX632KkSoNKL$KK31AyRv95cfJQ1mskb/6+BplJni571zlEk0snGyD0w=",
+    "last_login": "2026-08-26T13:13:36.396Z",
+    "is_superuser": true,
+    "username": "Lokeshh_Ai_Tools",
+    "first_name": "",
+    "last_name": "",
+    "email": "lokeshpatidarforyou@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-19T16:08:12.014Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "38fsh8jujoe3i9hrw0vgsczvzlzvn7va",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6bpsoW1HL3zDU23D4uaklA4Gf_dkHDQ68xk3uD8vhW3t7S6OcIICJdfJj48Uz1EfPh6X1RY6rbOoo5EnbapaYnpdTvbv0HxrcAIxIYxGxQOdA3UDcxJZyIkK5kiSrbUU9bWS9ShMywig84Wg-mjZQOfL8h2N3E:1wzDRg:EVilqKS_MzlyXd_UvTg5fc1oRlIocXM4yTyBP5hGNYo",
+    "expire_date": "2026-09-09T13:13:36.418Z"
+  }
+},
+{
+  "model": "portfolio.service",
+  "pk": 1,
+  "fields": {
+    "title": "AI Creation",
+    "description": "Cutting-edge AI-powered content creation including images, videos, and animations that bring your imagination to life with stunning realism.",
+    "icon": "fa-robot",
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.193Z"
+  }
+},
+{
+  "model": "portfolio.service",
+  "pk": 2,
+  "fields": {
+    "title": "Graphic Designing",
+    "description": "Premium graphic design for banners, posters, social media, logos, and all marketing materials with a professional touch.",
+    "icon": "fa-palette",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.195Z"
+  }
+},
+{
+  "model": "portfolio.service",
+  "pk": 3,
+  "fields": {
+    "title": "Album Designing",
+    "description": "Beautifully crafted wedding, birthday and family photo albums with creative layouts that tell your story memorably.",
+    "icon": "fa-images",
+    "order": 3,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.196Z"
+  }
+},
+{
+  "model": "portfolio.service",
+  "pk": 4,
+  "fields": {
+    "title": "Video Editing",
+    "description": "Professional video editing with color grading, transitions, music sync, and cinematic effects for weddings, events and reels.",
+    "icon": "fa-film",
+    "order": 4,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.198Z"
+  }
+},
+{
+  "model": "portfolio.service",
+  "pk": 5,
+  "fields": {
+    "title": "YouTube Content Creation",
+    "description": "Complete YouTube channel management including thumbnails, intros, editing, and content strategy to grow your audience.",
+    "icon": "fa-youtube",
+    "order": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.199Z"
+  }
+},
+{
+  "model": "portfolio.service",
+  "pk": 6,
+  "fields": {
+    "title": "RIP AI Videos",
+    "description": "Heartfelt AI tribute videos to honor your loved ones, created with care, emotion and cutting-edge AI technology.",
+    "icon": "fa-video",
+    "order": 6,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.201Z"
+  }
+},
+{
+  "model": "portfolio.videodemo",
+  "pk": 1,
+  "fields": {
+    "title": "AI Creation Demo 1",
+    "youtube_url": "https://youtu.be/kr0hRZkkbKc",
+    "description": "",
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.202Z"
+  }
+},
+{
+  "model": "portfolio.videodemo",
+  "pk": 2,
+  "fields": {
+    "title": "AI Creation Demo 2",
+    "youtube_url": "https://youtu.be/p1ai08A3KL8",
+    "description": "",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.204Z"
+  }
+},
+{
+  "model": "portfolio.videodemo",
+  "pk": 3,
+  "fields": {
+    "title": "AI Creation Demo 3",
+    "youtube_url": "https://youtu.be/pG0QbvTL4YA",
+    "description": "",
+    "order": 3,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.205Z"
+  }
+},
+{
+  "model": "portfolio.videodemo",
+  "pk": 4,
+  "fields": {
+    "title": "AI Creation Demo 4",
+    "youtube_url": "https://youtu.be/QzvsmBF6Y1Q",
+    "description": "",
+    "order": 4,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.207Z"
+  }
+},
+{
+  "model": "portfolio.videodemo",
+  "pk": 5,
+  "fields": {
+    "title": "AI Creation Demo 5",
+    "youtube_url": "https://youtu.be/umjkhWbmAtY",
+    "description": "",
+    "order": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.208Z"
+  }
+},
+{
+  "model": "portfolio.pricingpackage",
+  "pk": 1,
+  "fields": {
+    "name": "Basic Package",
+    "price_min": 2999,
+    "price_max": 6999,
+    "description": "Perfect for simple video creation",
+    "features": "HD Quality Video,Background Music,Basic Effects,2 Revisions,Fast Delivery",
+    "is_featured": false,
+    "order": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "portfolio.pricingpackage",
+  "pk": 2,
+  "fields": {
+    "name": "Premium Package",
+    "price_min": 4999,
+    "price_max": 9999,
+    "description": "Professional quality with advanced AI effects",
+    "features": "4K Quality Video,Premium Music,Advanced AI Effects,5 Revisions,Priority Delivery,Color Grading",
+    "is_featured": true,
+    "order": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "portfolio.pricingpackage",
+  "pk": 3,
+  "fields": {
+    "name": "Krishna Special",
+    "price_min": 4999,
+    "price_max": 14999,
+    "description": "Divine themed videos with special effects",
+    "features": "Divine Theme Design,Special AI Effects,Custom Music,Unlimited Revisions,Express Delivery",
+    "is_featured": false,
+    "order": 3,
+    "is_active": true
+  }
+},
+{
+  "model": "portfolio.pricingpackage",
+  "pk": 4,
+  "fields": {
+    "name": "Full Realistic",
+    "price_min": 14999,
+    "price_max": 34999,
+    "description": "Hyper-realistic AI video creation",
+    "features": "Hyper Realistic AI,Cinematic Quality,Custom Soundtrack,Unlimited Revisions,Commercial Rights",
+    "is_featured": false,
+    "order": 4,
+    "is_active": true
+  }
+},
+{
+  "model": "portfolio.pricingpackage",
+  "pk": 5,
+  "fields": {
+    "name": "Jain Family",
+    "price_min": 9999,
+    "price_max": 39999,
+    "description": "Complete family tribute with traditional elements",
+    "features": "Full Family Tribute,Traditional Elements,Multiple Videos,Photo Enhancement,Lifetime Storage",
+    "is_featured": false,
+    "order": 5,
+    "is_active": true
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 1,
+  "fields": {
+    "client_name": "Rajesh Sharma",
+    "client_location": "Indore, MP",
+    "message": "Lokeshh bhai ne meri maa ka RIP video bahut sundar banaya. Poori family ro padi. Bahut professional kaam! Highly recommended!",
+    "rating": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.218Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 2,
+  "fields": {
+    "client_name": "Sunita Patel",
+    "client_location": "Ahmedabad, Gujarat",
+    "message": "Amazing work on our wedding album! The AI effects were stunning. Everyone loved it. Will definitely hire again!",
+    "rating": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.219Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 3,
+  "fields": {
+    "client_name": "Amit Verma",
+    "client_location": "Jaipur, Rajasthan",
+    "message": "Mere YouTube channel ke liye bahut achi editing ki. Views 3x ho gaye. Lokeshh ji ka kaam satpratishat sahi hai!",
+    "rating": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.221Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 4,
+  "fields": {
+    "client_name": "Priya Gupta",
+    "client_location": "Bhopal, MP",
+    "message": "The graphic designs were beyond my expectations. Fast delivery, great communication, top-notch quality. 10/10!",
+    "rating": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.222Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 5,
+  "fields": {
+    "client_name": "Mohan Das",
+    "client_location": "Udaipur, Rajasthan",
+    "message": "Pitaji ki barsi ke liye ek bahut touching video banai. Ghar mein sabko bahut pasand aayi. Thank you Lokeshh ji!",
+    "rating": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.224Z"
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 6,
+  "fields": {
+    "client_name": "Kavita Singh",
+    "client_location": "Lucknow, UP",
+    "message": "My birthday album was absolutely gorgeous! AI effects made it look like a Bollywood production. Best money spent!",
+    "rating": 5,
+    "is_active": true,
+    "created_at": "2026-08-19T16:08:12.225Z"
+  }
+},
+{
+  "model": "portfolio.lead",
+  "pk": 1,
+  "fields": {
+    "name": "Khushi",
+    "mobile": "9340297224",
+    "email": "khushboopatidar888@gmail.com",
+    "requirement": "Bla bla bla bla bla",
+    "status": "new",
+    "notes": "",
+    "submitted_at": "2026-08-26T11:17:49.547Z"
+  }
+},
+{
+  "model": "portfolio.lead",
+  "pk": 2,
+  "fields": {
+    "name": "Jsjsjs",
+    "mobile": "9340297224",
+    "email": "khushboopatidar888@gmail.com",
+    "requirement": "FJajajakakakkakakakajajajaj",
+    "status": "new",
+    "notes": "",
+    "submitted_at": "2026-08-26T11:22:50.595Z"
+  }
+},
+{
+  "model": "portfolio.lead",
+  "pk": 3,
+  "fields": {
+    "name": "uytrewaesdrtfyghukj",
+    "mobile": "9340297224",
+    "email": "khushboopatidar888@gmail.com",
+    "requirement": "uytfgthjuikoiuytrdtyugihoj",
+    "status": "new",
+    "notes": "",
+    "submitted_at": "2026-08-26T11:35:55.535Z"
+  }
+},
+{
+  "model": "portfolio.lead",
+  "pk": 4,
+  "fields": {
+    "name": "asdfghj",
+    "mobile": "9340297224",
+    "email": "khushboopatidar888@gmail.com",
+    "requirement": "ytresdrftghjukiu87654wreadgxfhcgjgkhkfdj",
+    "status": "new",
+    "notes": "",
+    "submitted_at": "2026-08-26T11:48:44.245Z"
+  }
+},
+{
+  "model": "portfolio.lead",
+  "pk": 5,
+  "fields": {
+    "name": "ytyrewaertyu",
+    "mobile": "9340297224",
+    "email": "khushboopatidar888@gmail.com",
+    "requirement": "bla bla bla bla",
+    "status": "new",
+    "notes": "",
+    "submitted_at": "2026-08-26T12:08:41.406Z"
+  }
+},
+{
+  "model": "portfolio.lead",
+  "pk": 6,
+  "fields": {
+    "name": "khushi",
+    "mobile": "9340297224",
+    "email": "khushboopatidar888@gmail.com",
+    "requirement": "bla bla bla bla",
+    "status": "new",
+    "notes": "",
+    "submitted_at": "2026-08-26T12:54:56.303Z"
+  }
+},
+{
+  "model": "portfolio.sitesettings",
+  "pk": 1,
+  "fields": {
+    "hero_headline": "Bring Your Memories to Life with AI Magic",
+    "hero_subheadline": "Professional AI Video Creation, Graphic Design & Video Editing",
+    "about_text": "Lokeshh Patidar is a creative professional specializing in AI-powered video creation, graphic design, album designing, and premium video editing. With a passion for storytelling and cutting-edge technology, Lokeshh transforms your precious memories into breathtaking visual experiences that last forever.",
+    "phone": "7803863255",
+    "email": "lokeshhaitools@gmail.com",
+    "whatsapp_number": "917803863255",
+    "whatsapp_message": "Hi Lokeshh, I am interested in your work.",
+    "meta_title": "Lokeshh Ai Tools | AI Video Creation & Graphic Design",
+    "meta_description": "Professional AI video creation, graphic design, album designing & video editing by Lokeshh Patidar."
+  }
+}
+]
