@@ -30,7 +30,7 @@
   /* ── Typography Colors ── */
   --text-white:     #F8FAFC;
   --text-light:     #E2E8F0;
-  --text-muted:     #94A3B8;
+  --text-muted:     #dde4ec; 
   --text-sub:       #64748B;
 
   /* ── Borders ── */
@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── SPACING & CONTAINERS ─────────────────────────────────────────────── */
 .section-pad {
-  padding: 110px 0;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -464,14 +464,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── HERO SECTION ─────────────────────────────────────────────────────── */
 .hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 150px 0 90px;
+  /* padding: 10px 0 150px; */
   background: var(--bg-main);
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
 }
 
 .hero-glow-1 {
@@ -608,11 +610,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-sub {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: clamp(1.66rem, 2vw, 1.25rem);
   color: var(--text-muted);
   max-width: 650px;
   margin: 1.4rem auto 0;
-  line-height: 1.8;
+  line-height: 2;
   font-weight: 400;
 }
 
@@ -1744,6 +1746,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── TOP ANNOUNCEMENT BANNER ─────────────────────────────────────────── */
+.promo-banner-wrap {
+  background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  padding: 22px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.25);
+  margin-top: 90px;
+}
+
+.promo-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: var(--grad-primary);
+  color: var(--white) !important;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  box-shadow: 0 4px 22px rgba(139, 92, 246, 0.45);
+  transition: all 0.3s ease;
+}
+
+.promo-banner-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.65);
+  color: var(--white) !important;
+}
+
+.promo-banner-btn-alt {
+  background: var(--grad-cyan-indigo);
+  box-shadow: 0 4px 22px rgba(6, 182, 212, 0.4);
+}
+
+.promo-banner-btn-alt:hover {
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.6);
+}
+
 .top-announcement-bar {
   background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
   border-bottom: 1px solid rgba(99, 102, 241, 0.2);
