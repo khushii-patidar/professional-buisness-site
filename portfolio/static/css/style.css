@@ -2205,6 +2205,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
 /* Horizontal Scroll for Mobile */
 @media (max-width: 991.98px) {
   .horizontal-scroll-mobile {
@@ -2213,15 +2214,33 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-    padding-bottom: 15px;
+    padding-bottom: 20px; /* space for scrollbar */
     gap: 15px;
     margin-left: 0;
     margin-right: 0;
+    
+    /* Make scrollbar visible as a sleek line */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 242, 254, 0.5) rgba(255, 255, 255, 0.05);
   }
+  
+  /* Webkit custom scrollbar */
   .horizontal-scroll-mobile::-webkit-scrollbar {
-    display: none;
+    display: block !important;
+    height: 6px;
   }
+  .horizontal-scroll-mobile::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 0 15px;
+  }
+  .horizontal-scroll-mobile::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 254, 0.5);
+    border-radius: 10px;
+  }
+  
   .horizontal-scroll-mobile > .col {
+    /* 85% width guarantees part of the next card is visible */
     flex: 0 0 85% !important;
     max-width: 85% !important;
     scroll-snap-align: center;
