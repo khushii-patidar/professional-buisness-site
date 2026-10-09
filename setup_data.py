@@ -12,10 +12,8 @@ print("Setting up Lokeshh Ai Tools data...")
 
 if not User.objects.filter(username='Lokeshh_Ai_Tools').exists():
     User.objects.create_superuser('Lokeshh_Ai_Tools', 'lokeshpatidarforyou@gmail.com', 'Lokesh@2024Admin')
-    print("Admin: Lokeshh_Ai_Tools / Lokesh@2024Admin")
 
 SiteSettings.get_settings()
-print("Site settings ready")
 
 services = [
     ('AI Creation', 'Cutting-edge AI-powered content creation including images, videos, and animations that bring your imagination to life with stunning realism.', 'fa-robot', 1),
@@ -26,10 +24,10 @@ services = [
     ('RIP AI Videos', 'Heartfelt AI tribute videos to honor your loved ones, created with care, emotion and cutting-edge AI technology.', 'fa-video', 6),
 ]
 for title, desc, icon, order in services:
-    obj, c = Service.objects.get_or_create(title=title, defaults={'description': desc, 'icon': icon, 'order': order})
-    if c: print(f"Added Service: {title}")
+    Service.objects.get_or_create(title=title, defaults={'description': desc, 'icon': icon, 'order': order})
 
-# Updated Video Titles!
+# Force reset videos
+VideoDemo.objects.all().delete()
 videos = [
     ('Magical Lotus Intro', 'https://youtu.be/kr0hRZkkbKc', 1),
     ('Divine Ganpati Bappa', 'https://youtu.be/p1ai08A3KL8', 2),
@@ -38,9 +36,10 @@ videos = [
     ('Jain Bhagwan Divine Video', 'https://youtu.be/umjkhWbmAtY', 5),
 ]
 for title, url, order in videos:
-    obj, c = VideoDemo.objects.update_or_create(youtube_url=url, defaults={'title': title, 'order': order})
-    print(f"Updated/Created Video: {title}")
+    VideoDemo.objects.create(title=title, youtube_url=url, order=order, is_active=True)
 
+# Force reset pricing packages
+PricingPackage.objects.all().delete()
 packages = [
     ('Basic Package', 2999, 6999, 'Perfect for simple video creation', 'HD Quality Video,Background Music,Basic Effects,2 Revisions,Fast Delivery', False, 1),
     ('Premium Package', 4999, 9999, 'Professional quality with advanced AI effects', '4K Quality Video,Premium Music,Advanced AI Effects,5 Revisions,Priority Delivery,Color Grading', True, 2),
@@ -49,8 +48,7 @@ packages = [
     ('Jain Family', 9999, 39999, 'Complete family tribute with traditional elements', 'Full Family Tribute,Traditional Elements,Multiple Videos,Photo Enhancement,Lifetime Storage', False, 5),
 ]
 for name, pmin, pmax, desc, feat, featured, order in packages:
-    obj, c = PricingPackage.objects.get_or_create(name=name, defaults={'price_min': pmin, 'price_max': pmax, 'description': desc, 'features': feat, 'is_featured': featured, 'order': order})
-    if c: print(f"Added Package: {name}")
+    PricingPackage.objects.create(name=name, price_min=pmin, price_max=pmax, description=desc, features=feat, is_featured=featured, order=order, is_active=True)
 
 testimonials = [
     ('Rajesh Sharma', 'Indore, MP', 'Lokeshh bhai ne meri maa ka RIP video bahut sundar banaya. Poori family ro padi. Bahut professional kaam! Highly recommended!', 5),
@@ -61,7 +59,6 @@ testimonials = [
     ('Kavita Singh', 'Lucknow, UP', 'My birthday album was absolutely gorgeous! AI effects made it look like a Bollywood production. Best money spent!', 5),
 ]
 for name, loc, msg, rating in testimonials:
-    obj, c = __import__('portfolio.models', fromlist=['Testimonial']).Testimonial.objects.get_or_create(client_name=name, defaults={'client_location': loc, 'message': msg, 'rating': rating})
-    if c: print(f"Added Testimonial: {name}")
+    __import__('portfolio.models', fromlist=['Testimonial']).Testimonial.objects.get_or_create(client_name=name, defaults={'client_location': loc, 'message': msg, 'rating': rating})
 
 print("Done!")
