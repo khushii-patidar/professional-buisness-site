@@ -36,6 +36,21 @@ def get_base_context():
 
 
 def home(request):
+    # FORCE DB UPDATE HACK FOR RENDER
+    try:
+        VideoDemo.objects.filter(title__icontains='AI Creation').delete()
+        videos_data = [
+            ('Magical Lotus Intro', 'https://youtu.be/kr0hRZkkbKc', 1),
+            ('Divine Ganpati Bappa', 'https://youtu.be/p1ai08A3KL8', 2),
+            ('Shree Krishna Special', 'https://youtu.be/pG0QbvTL4YA', 3),
+            ('Grand Entry', 'https://youtu.be/QzvsmBF6Y1Q', 4),
+            ('Jain Bhagwan Divine Video', 'https://youtu.be/umjkhWbmAtY', 5),
+        ]
+        for v_title, v_url, v_order in videos_data:
+            VideoDemo.objects.update_or_create(youtube_url=v_url, defaults={'title': v_title, 'order': v_order, 'is_active': True})
+    except Exception:
+        pass
+
     context = get_base_context()
     context.update({
         'services': Service.objects.filter(is_active=True),
