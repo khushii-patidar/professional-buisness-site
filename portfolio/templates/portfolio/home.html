@@ -57,7 +57,7 @@
       <div class="modern-divider"></div>
     </div>
     
-    <div class="row gy-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+    <div class="row gy-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 horizontal-scroll-mobile">
       {% for video in videos %}
       <div class="col" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0 }}00">
         <div class="demo-video-card h-100">
@@ -172,7 +172,7 @@
       <div class="modern-divider"></div>
     </div>
     
-    <div class="row gy-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+    <div class="row gy-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 horizontal-scroll-mobile">
       {% for pkg in packages %}
       <div class="col" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
         <div class="pricing-card h-100 {% if pkg.is_featured %}pricing-featured{% endif %}" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px 20px;">

@@ -2204,3 +2204,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+/* Horizontal Scroll for Mobile */
+@media (max-width: 991.98px) {
+  .horizontal-scroll-mobile {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
+    gap: 15px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .horizontal-scroll-mobile::-webkit-scrollbar {
+    display: none;
+  }
+  .horizontal-scroll-mobile > .col {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
