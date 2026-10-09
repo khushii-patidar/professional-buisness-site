@@ -1147,6 +1147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pricing-range {
+  white-space: nowrap;
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -1155,15 +1156,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .price-currency {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #67E8F9;
 }
 
 .price-min, .price-max {
   font-family: var(--ff-display);
-  font-size: 2.3rem;
-  font-weight: 900;
+  font-size: 1.35rem;
+  font-weight: 500;
   color: #FFFFFF;
   line-height: 1;
 }
