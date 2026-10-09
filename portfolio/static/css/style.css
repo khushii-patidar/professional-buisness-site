@@ -2211,6 +2211,7 @@ h1, h2, h3, h4, h5, h6 {
   .horizontal-scroll-mobile {
     display: flex;
     flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -2228,6 +2229,7 @@ h1, h2, h3, h4, h5, h6 {
   .horizontal-scroll-mobile::-webkit-scrollbar {
     display: block !important;
     height: 6px;
+    -webkit-appearance: none;
   }
   .horizontal-scroll-mobile::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
