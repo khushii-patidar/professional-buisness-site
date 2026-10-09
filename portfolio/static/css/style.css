@@ -2241,8 +2241,8 @@ h1, h2, h3, h4, h5, h6 {
   
   .horizontal-scroll-mobile > .col {
     /* 85% width guarantees part of the next card is visible */
-    flex: 0 0 85% !important;
-    max-width: 85% !important;
+    flex: 0 0 75% !important;
+    max-width: 75% !important;
     scroll-snap-align: center;
     padding-left: 0;
     padding-right: 0;
