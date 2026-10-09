@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Initial data setup — run once after migrate."""
+"""Initial data setup - run once after migrate."""
 import os, sys, django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'editor_lokesh.settings')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -8,14 +8,14 @@ django.setup()
 from django.contrib.auth.models import User
 from portfolio.models import Service, VideoDemo, PricingPackage, Testimonial, SiteSettings
 
-print("🚀 Setting up Lokeshh Ai Tools data...")
+print("Setting up Lokeshh Ai Tools data...")
 
 if not User.objects.filter(username='Lokeshh_Ai_Tools').exists():
     User.objects.create_superuser('Lokeshh_Ai_Tools', 'lokeshpatidarforyou@gmail.com', 'Lokesh@2024Admin')
-    print("✅ Admin: Lokeshh_Ai_Tools / Lokesh@2024Admin")
+    print("Admin: Lokeshh_Ai_Tools / Lokesh@2024Admin")
 
 SiteSettings.get_settings()
-print("✅ Site settings ready")
+print("Site settings ready")
 
 services = [
     ('AI Creation', 'Cutting-edge AI-powered content creation including images, videos, and animations that bring your imagination to life with stunning realism.', 'fa-robot', 1),
@@ -27,18 +27,19 @@ services = [
 ]
 for title, desc, icon, order in services:
     obj, c = Service.objects.get_or_create(title=title, defaults={'description': desc, 'icon': icon, 'order': order})
-    if c: print(f"   ✅ {title}")
+    if c: print(f"Added Service: {title}")
 
+# Updated Video Titles!
 videos = [
-    ('AI Creation Demo 1', 'https://youtu.be/kr0hRZkkbKc', 1),
-    ('AI Creation Demo 2', 'https://youtu.be/p1ai08A3KL8', 2),
-    ('AI Creation Demo 3', 'https://youtu.be/pG0QbvTL4YA', 3),
-    ('AI Creation Demo 4', 'https://youtu.be/QzvsmBF6Y1Q', 4),
-    ('AI Creation Demo 5', 'https://youtu.be/umjkhWbmAtY', 5),
+    ('Magical Lotus Intro', 'https://youtu.be/kr0hRZkkbKc', 1),
+    ('Divine Ganpati Bappa', 'https://youtu.be/p1ai08A3KL8', 2),
+    ('Shree Krishna Special', 'https://youtu.be/pG0QbvTL4YA', 3),
+    ('Grand Entry', 'https://youtu.be/QzvsmBF6Y1Q', 4),
+    ('Jain Bhagwan Divine Video', 'https://youtu.be/umjkhWbmAtY', 5),
 ]
 for title, url, order in videos:
-    obj, c = VideoDemo.objects.get_or_create(youtube_url=url, defaults={'title': title, 'order': order})
-    if c: print(f"   ✅ {title}")
+    obj, c = VideoDemo.objects.update_or_create(youtube_url=url, defaults={'title': title, 'order': order})
+    print(f"Updated/Created Video: {title}")
 
 packages = [
     ('Basic Package', 2999, 6999, 'Perfect for simple video creation', 'HD Quality Video,Background Music,Basic Effects,2 Revisions,Fast Delivery', False, 1),
@@ -49,7 +50,7 @@ packages = [
 ]
 for name, pmin, pmax, desc, feat, featured, order in packages:
     obj, c = PricingPackage.objects.get_or_create(name=name, defaults={'price_min': pmin, 'price_max': pmax, 'description': desc, 'features': feat, 'is_featured': featured, 'order': order})
-    if c: print(f"   ✅ {name}")
+    if c: print(f"Added Package: {name}")
 
 testimonials = [
     ('Rajesh Sharma', 'Indore, MP', 'Lokeshh bhai ne meri maa ka RIP video bahut sundar banaya. Poori family ro padi. Bahut professional kaam! Highly recommended!', 5),
@@ -61,13 +62,6 @@ testimonials = [
 ]
 for name, loc, msg, rating in testimonials:
     obj, c = __import__('portfolio.models', fromlist=['Testimonial']).Testimonial.objects.get_or_create(client_name=name, defaults={'client_location': loc, 'message': msg, 'rating': rating})
-    if c: print(f"   ✅ {name}")
+    if c: print(f"Added Testimonial: {name}")
 
-print()
-print("🎉 Done!")
-print("="*45)
-print("Admin URL:  http://127.0.0.1:8000/admin/")
-print("Username:   Lokeshh_Ai_Tools")
-print("Password:   Lokesh@2024Admin")
-print("⚠️  Change password after first login!")
-print("="*45)
+print("Done!")
