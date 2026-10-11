@@ -2251,27 +2251,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ── STICKY BOTTOM ACTION BAR (FULL WIDTH ON MOBILE) ── */
+/* ── STICKY BOTTOM ACTION BAR (APPROX 30% SCREEN HEIGHT ON MOBILE) ── */
 .sticky-bottom-cta {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 99999;
-  background: rgba(4, 7, 15, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 10px 14px 14px 14px;
-  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 7, 15, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 12px 14px calc(14px + env(safe-area-inset-bottom, 0px)) 14px;
+  box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .sticky-cta-inner {
-  max-width: 520px;
+  max-width: 540px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   width: 100%;
 }
 
@@ -2280,14 +2280,14 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   text-decoration: none !important;
-  height: 52px;
-  border-radius: 12px;
+  height: clamp(70px, 12.5vh, 92px);
+  border-radius: 16px;
   color: #FFFFFF !important;
   font-family: inherit;
   overflow: hidden;
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
 }
 
 /* WhatsApp Button */
@@ -2316,35 +2316,35 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Left Icon Container */
 .cta-icon-box {
-  width: 56px;
+  width: clamp(68px, 16vw, 90px);
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
+  font-size: clamp(2.2rem, 4.4vh, 2.85rem);
   flex-shrink: 0;
   color: #FFFFFF;
 }
 
 .btn-call-cta .cta-icon-box {
-  font-size: 1.4rem;
+  font-size: clamp(1.8rem, 3.8vh, 2.35rem);
 }
 
 /* Vertical Divider */
 .cta-divider {
-  width: 1.5px;
-  height: 28px;
-  background: rgba(255, 255, 255, 0.4);
+  width: 2px;
+  height: 52%;
+  background: rgba(255, 255, 255, 0.45);
   flex-shrink: 0;
 }
 
 /* Center Text */
 .cta-text {
   flex-grow: 1;
-  padding-left: 16px;
-  font-size: 1.12rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
+  padding-left: clamp(14px, 3.2vw, 22px);
+  font-size: clamp(1.25rem, 2.6vh, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0.4px;
   white-space: nowrap;
   color: #FFFFFF;
   text-align: left;
@@ -2352,8 +2352,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Right Chevron Arrow */
 .cta-arrow {
-  padding-right: 18px;
-  font-size: 1.2rem;
+  padding-right: clamp(16px, 3.2vw, 24px);
+  font-size: clamp(1.35rem, 2.8vh, 1.75rem);
   color: #FFFFFF;
   font-weight: 900;
   display: flex;
@@ -2365,30 +2365,30 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes pulseWa {
   0% {
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.35);
+    box-shadow: 0 4px 18px rgba(0, 200, 83, 0.35);
   }
   50% {
     transform: scale(1.025);
-    box-shadow: 0 8px 25px rgba(0, 200, 83, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 200, 83, 0.75);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.35);
+    box-shadow: 0 4px 18px rgba(0, 200, 83, 0.35);
   }
 }
 
 @keyframes pulseCall {
   0% {
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+    box-shadow: 0 4px 18px rgba(139, 92, 246, 0.35);
   }
   50% {
     transform: scale(1.025);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.7);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.75);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+    box-shadow: 0 4px 18px rgba(139, 92, 246, 0.35);
   }
 }
 
@@ -2397,11 +2397,11 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(4px);
+    transform: translateX(5px);
   }
 }
 
 /* Space at bottom of page so sticky CTA bar never covers footer content */
 body {
-  padding-bottom: 145px !important;
+  padding-bottom: clamp(210px, 32vh, 280px) !important;
 }
