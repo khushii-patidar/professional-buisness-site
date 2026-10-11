@@ -62,10 +62,33 @@
   </div>
 </footer>
 
-<!-- ── FLOATING ACTION BUTTONS ──────────────────────────────────────────── -->
-<div class="floating-actions">
-  <a href="{{ whatsapp_url }}" target="_blank" class="fab-btn fab-wa" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  <a href="{{ call_url }}" class="fab-btn fab-call" title="Call Now"><i class="fas fa-phone"></i></a>
+<!-- ── STICKY BOTTOM ACTION BAR (FULL WIDTH ON MOBILE) ───────────────────── -->
+<div class="sticky-bottom-cta">
+  <div class="sticky-cta-inner">
+    <!-- WhatsApp Button -->
+    <a href="{{ whatsapp_url }}" target="_blank" class="sticky-cta-btn btn-wa-cta">
+      <div class="cta-icon-box">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <div class="cta-divider"></div>
+      <div class="cta-text">Chat on WhatsApp</div>
+      <div class="cta-arrow">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </a>
+    
+    <!-- Call Button -->
+    <a href="{{ call_url }}" class="sticky-cta-btn btn-call-cta">
+      <div class="cta-icon-box">
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <div class="cta-divider"></div>
+      <div class="cta-text">Call for Requirements</div>
+      <div class="cta-arrow">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </a>
+  </div>
 </div>
 
 <style>
@@ -76,6 +99,161 @@
   .goog-tooltip { display: none !important; }
   .goog-tooltip:hover { display: none !important; }
   .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+
+  /* ── STICKY BOTTOM ACTION BAR (FULL WIDTH ON MOBILE) ── */
+  .sticky-bottom-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background: rgba(4, 7, 15, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 10px 14px 14px 14px;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sticky-cta-inner {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .sticky-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none !important;
+    height: 52px;
+    border-radius: 12px;
+    color: #FFFFFF !important;
+    font-family: inherit;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  /* WhatsApp Button */
+  .btn-wa-cta {
+    background: #00c853;
+    animation: pulseWa 2.4s infinite ease-in-out;
+  }
+
+  .btn-wa-cta:hover, .btn-wa-cta:active {
+    background: #00b34a;
+    transform: scale(1.02);
+    color: #FFFFFF !important;
+  }
+
+  /* Call Button */
+  .btn-call-cta {
+    background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    animation: pulseCall 2.4s infinite ease-in-out 1.2s;
+  }
+
+  .btn-call-cta:hover, .btn-call-cta:active {
+    background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+    transform: scale(1.02);
+    color: #FFFFFF !important;
+  }
+
+  /* Left Icon Container */
+  .cta-icon-box {
+    width: 56px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    color: #FFFFFF;
+  }
+
+  .btn-call-cta .cta-icon-box {
+    font-size: 1.4rem;
+  }
+
+  /* Vertical Divider */
+  .cta-divider {
+    width: 1.5px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+  }
+
+  /* Center Text */
+  .cta-text {
+    flex-grow: 1;
+    padding-left: 16px;
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    text-align: left;
+  }
+
+  /* Right Chevron Arrow */
+  .cta-arrow {
+    padding-right: 18px;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    animation: bounceArrow 1.6s infinite ease-in-out;
+  }
+
+  /* Animations: Zoom In / Zoom Out Pulse & Arrow */
+  @keyframes pulseWa {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(0, 200, 83, 0.35);
+    }
+    50% {
+      transform: scale(1.025);
+      box-shadow: 0 8px 25px rgba(0, 200, 83, 0.7);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(0, 200, 83, 0.35);
+    }
+  }
+
+  @keyframes pulseCall {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+    }
+    50% {
+      transform: scale(1.025);
+      box-shadow: 0 8px 25px rgba(139, 92, 246, 0.7);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+    }
+  }
+
+  @keyframes bounceArrow {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+  }
+
+  /* Space at bottom of page so sticky CTA bar never covers footer content */
+  body {
+    padding-bottom: 145px !important;
+  }
 </style>
 <div id="google_translate_element"></div>
 <script type="text/javascript">

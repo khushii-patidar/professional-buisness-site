@@ -13,7 +13,9 @@ print("Setting up Lokeshh Ai Tools data...")
 if not User.objects.filter(username='Lokeshh_Ai_Tools').exists():
     User.objects.create_superuser('Lokeshh_Ai_Tools', 'lokeshpatidarforyou@gmail.com', 'Lokesh@2024Admin')
 
-SiteSettings.get_settings()
+s = SiteSettings.get_settings()
+s.whatsapp_message = 'Hello Lokeshh, I saw your portfolio website (lokeshh-ai-tools.in) and want to discuss my project requirement.'
+s.save()
 
 services = [
     ('AI Creation', 'Cutting-edge AI-powered content creation including images, videos, and animations that bring your imagination to life with stunning realism.', 'fa-robot', 1),

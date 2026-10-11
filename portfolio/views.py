@@ -17,13 +17,16 @@ LANGUAGES = [
 ]
 
 
+import urllib.parse
+
 DEFAULT_INSTAGRAM_URL = "https://www.instagram.com/lokeshh_ai_tools?igsi=MTZqeXN5emNvbHpxeQ=="
 DEFAULT_YOUTUBE_URL = "https://youtube.com/@lokeshh_ai_tools?si=qtopkDZ4dVuQwoj5"
 
 
 def get_base_context():
     site = SiteSettings.get_settings()
-    msg = site.whatsapp_message.replace(' ', '%20')
+    default_msg = site.whatsapp_message if (site and site.whatsapp_message) else "Hello Lokeshh, I saw your portfolio website and want to discuss my project requirement."
+    msg = urllib.parse.quote(default_msg)
     insta = getattr(site, 'instagram_url', None) or DEFAULT_INSTAGRAM_URL
     yt = getattr(site, 'youtube_url', None) or DEFAULT_YOUTUBE_URL
     return {
@@ -48,6 +51,11 @@ def home(request):
         ]
         for v_title, v_url, v_order in videos_data:
             VideoDemo.objects.update_or_create(youtube_url=v_url, defaults={'title': v_title, 'order': v_order, 'is_active': True})
+        
+        site_s = SiteSettings.get_settings()
+        if not site_s.whatsapp_message or 'interested in your work' in site_s.whatsapp_message:
+            site_s.whatsapp_message = 'Hello Lokeshh, I saw your portfolio website (lokeshh-ai-tools.in) and want to discuss my project requirement.'
+            site_s.save()
     except Exception:
         pass
 
