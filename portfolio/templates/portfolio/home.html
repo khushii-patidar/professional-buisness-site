@@ -5,10 +5,10 @@
 {% block content %}
 
 
-<!-- ── ABOUT ME SECTION ─────────────────────────────────────────────────── -->
-<section class="section-pad section-dark text-center" id="about">
-  <div class="container position-relative" style="max-width: 700px;">
-    <!-- Language Toggle -->
+<!-- ── FEATURED DEMO GALLERY (WITH VIDEO THUMBNAILS & DIRECT YOUTUBE WATCH) ── -->
+<section class="section-dark" id="gallery" style="padding-top: 25px; padding-bottom: 25px;">
+  <div class="container position-relative">
+    <!-- Language Toggle Desktop -->
     <div class="position-absolute top-0 end-0 mt-2 z-3 d-none d-md-block">
       <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; display: flex; align-items: center; padding: 3px;">
         <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-btn lang-en active" style="background: #22c55e; color: #000; font-weight: 600; text-decoration: none; padding: 6px 20px; border-radius: 25px; font-size: 0.9rem; transition: all 0.3s;">English</a>
@@ -17,39 +17,13 @@
     </div>
     
     <!-- Mobile Language Toggle -->
-    <div class="d-md-none d-flex justify-content-center mb-4 pt-2">
+    <div class="d-md-none d-flex justify-content-center mb-4 pt-1">
       <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; display: flex; align-items: center; padding: 3px;">
         <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-btn lang-en active" style="background: #22c55e; color: #000; font-weight: 600; text-decoration: none; padding: 5px 16px; border-radius: 25px; font-size: 0.85rem; transition: all 0.3s;">English</a>
         <a href="javascript:void(0)" onclick="changeLanguage('hi')" class="lang-btn lang-hi" style="color: #a1a1aa; font-weight: 500; text-decoration: none; padding: 5px 16px; border-radius: 25px; font-size: 0.85rem; transition: all 0.3s;">हिंदी</a>
       </div>
     </div>
-    <div data-aos="fade-up">
-      <!-- Lokeshh's Profile Photo -->
-      <div class="profile-avatar-container mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 170px; height: 170px; border-radius: 50%; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); padding: 3px;">
-        <img src="{% static 'media_1787731791265.jpg' %}" alt="Lokeshh Patidar" class="profile-avatar-img w-100 h-100 rounded-circle object-fit-cover" style="border: 5px solid #04070F; box-shadow: none;">
-      </div>
-      
-      <!-- YouTube Link Pill -->
-      <a href="{{ youtube_url }}" target="_blank" style="display: inline-block; background: rgba(255, 0, 0, 0.1); border: 1px solid rgba(255, 0, 0, 0.3); color: #ffebf0; padding: 6px 18px; border-radius: 20px; font-size: 0.95rem; text-decoration: none; margin-bottom: 25px; transition: all 0.3s;">
-        <i class="fab fa-youtube text-danger me-1"></i> @Lokeshh_Ai_Tools
-      </a>
-      
-      <h3 class="about-name mb-3" style="font-size: 2.2rem; font-weight: 700; letter-spacing: 0.5px;">
-        Bring Your Ideas To Life
-      </h3>
-      
-      <p class="about-story mx-auto mb-2" style="font-size: 1.15rem; line-height: 1.8; color: #a1a1aa; max-width: 600px; font-weight: 300; letter-spacing: 0.3px;">
-        Hi, I am Lokeshh Patidar. High-quality AI Video creation, <br>
-        emotional tributes, and cinematic visual storytelling.
-      </p>
-    </div>
-  </div>
-</section>
 
-
-<!-- ── FEATURED DEMO GALLERY (WITH VIDEO THUMBNAILS & DIRECT YOUTUBE WATCH) ── -->
-<section class="section-dark" id="gallery" style="padding-top: 20px; padding-bottom: 20px;">
-  <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
       <h2 class="section-title">
         YouTube <span class="gradient-text-cyan">Demo Gallery</span>
@@ -146,8 +120,6 @@
       {% endfor %}
     </div>
 
-
-    
     <div class="mt-5 mx-auto" style="max-width: 800px;" data-aos="fade-up">
       <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 15px; padding: 16px; text-align: center; color: #d4d4d8; font-size: 1.1rem; word-spacing: 2px; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
         <i class="fas fa-caret-right me-1 text-white"></i> Watch all my previous videos on YouTube: 
@@ -162,8 +134,37 @@
 
 
 
+<!-- ── ABOUT ME SECTION ─────────────────────────────────────────────────── -->
+<section class="section-dark text-center" id="about" style="padding-top: 40px; padding-bottom: 25px;">
+  <div class="container" style="max-width: 700px;">
+    <div data-aos="fade-up">
+      <!-- Lokeshh's Profile Photo -->
+      <div class="profile-avatar-container mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 170px; height: 170px; border-radius: 50%; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); padding: 3px;">
+        <img src="{% static 'media_1787731791265.jpg' %}" alt="Lokeshh Patidar" class="profile-avatar-img w-100 h-100 rounded-circle object-fit-cover" style="border: 5px solid #04070F; box-shadow: none;">
+      </div>
+      
+      <!-- YouTube Link Pill -->
+      <a href="{{ youtube_url }}" target="_blank" style="display: inline-block; background: rgba(255, 0, 0, 0.1); border: 1px solid rgba(255, 0, 0, 0.3); color: #ffebf0; padding: 6px 18px; border-radius: 20px; font-size: 0.95rem; text-decoration: none; margin-bottom: 25px; transition: all 0.3s;">
+        <i class="fab fa-youtube text-danger me-1"></i> @Lokeshh_Ai_Tools
+      </a>
+      
+      <h3 class="about-name mb-3" style="font-size: 2.2rem; font-weight: 700; letter-spacing: 0.5px;">
+        Bring Your Ideas To Life
+      </h3>
+      
+      <p class="about-story mx-auto mb-2" style="font-size: 1.15rem; line-height: 1.8; color: #a1a1aa; max-width: 600px; font-weight: 300; letter-spacing: 0.3px;">
+        Hi, I am Lokeshh Patidar. High-quality AI Video creation, <br>
+        emotional tributes, and cinematic visual storytelling.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
 <!-- ── PRICING PACKAGES (NO SCANNER) ────────────────────────────────────── -->
-<section class="section-dark" id="pricing" style="padding-top: 80px; padding-bottom: 40px;">
+<section class="section-dark" id="pricing" style="padding-top: 40px; padding-bottom: 40px;">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
       <h2 class="section-title">
@@ -263,13 +264,7 @@
       </p>
     </div>
 
-    
-
   </div>
 </section>
-
-
-    
-    
 
 {% endblock %}
