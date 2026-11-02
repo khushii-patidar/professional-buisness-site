@@ -56,8 +56,8 @@ def home(request):
         if not site_s.whatsapp_message or 'interested in your work' in site_s.whatsapp_message:
             site_s.whatsapp_message = 'Hello Lokeshh, I saw your portfolio website (lokeshh-ai-tools.in) and want to discuss my project requirement.'
             site_s.save()
-    except Exception:
-        pass
+    except Exception as e:
+        print("HOME ERROR:",e)
 
     context = get_base_context()
     context.update({
